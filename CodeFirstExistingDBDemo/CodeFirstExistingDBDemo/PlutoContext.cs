@@ -26,6 +26,10 @@ namespace CodeFirstExistingDBDemo
                 .HasMany(e => e.Tags)
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id"));
+
+            //modelBuilder.Entity<Course>()
+            //    .Property(type => type.Description)
+            //    .IsRequired();
         }
     }
 }
